@@ -1,10 +1,26 @@
 # Override configuration from https://github.com/jenkins-x/jenkins-x-platform/blob/master/values.yaml
+docker-registry:
+  persistence:
+    enabled: true
+    storageClass: "default"
+chartmuseum:
+  persistence:
+    enabled: true
+    storageClass: "default"
+nexus:
+  persistence:
+    enabled: true
+    storageClass: "default"
 monocular:
   mongodb:
     persistence:
-      enabled: false 
+      enabled: true
+      storageClass: "default"
 # Smaller cluster configurations require more time   
 jenkins:
+  persistence:
+    enabled: true
+    storageClass: "default"
   Master:
     Readiness:
       InitialDelaySeconds: 600
