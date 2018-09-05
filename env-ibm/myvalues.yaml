@@ -18,9 +18,9 @@ monocular:
       storageClass: "default"
 # Smaller cluster configurations require more time   
 jenkins:
-  persistence:
-    enabled: true
-    storageClass: "default"
+  Persistence:
+    Enabled: true
+    StorageClass: "default"
   Master:
     Readiness:
       InitialDelaySeconds: 600
